@@ -18,6 +18,6 @@ export default class MainCommand extends Command {
   async run(): Promise<void> {
     // const {args, flags} = await this.parse(Hello)
 
-    this.log(`main command`)
+    this.log(`Usage: antora-tools preview`)
   }
 }
