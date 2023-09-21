@@ -27,7 +27,7 @@ const playbookTemplate = {
   },
   ui: {
     bundle: {
-      url: "https://s3.ap-southeast-1.amazonaws.com/static3.wndv.co/lmwn-asset/antora-ui/ui-bundle.zip",
+      url: "https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable",
     },
   },
   output: {

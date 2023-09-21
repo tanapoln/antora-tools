@@ -1,8 +1,15 @@
 = Antora tools
 
-Welcome!
+=== Features
 
-Features
+* preview - preview current content in git repo
 
-* preview
-* build
+----
+npx antora-tools preview
+----
+
+=== Limitations
+
+* document must be inside `docs` directory
+* site will be generated into `tmp` directory, please add into `.gitignore`
+* Only listen on HTTP port 8080

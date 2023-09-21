@@ -27,8 +27,7 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`antora-tools hello PERSON`](#antora-tools-hello-person)
-* [`antora-tools hello world`](#antora-tools-hello-world)
+* [`antora-tools`](#antora-tools)
 * [`antora-tools help [COMMANDS]`](#antora-tools-help-commands)
 * [`antora-tools plugins`](#antora-tools-plugins)
 * [`antora-tools plugins:install PLUGIN...`](#antora-tools-pluginsinstall-plugin)
@@ -39,48 +38,24 @@ USAGE
 * [`antora-tools plugins:uninstall PLUGIN...`](#antora-tools-pluginsuninstall-plugin-1)
 * [`antora-tools plugins:uninstall PLUGIN...`](#antora-tools-pluginsuninstall-plugin-2)
 * [`antora-tools plugins update`](#antora-tools-plugins-update)
+* [`antora-tools preview`](#antora-tools-preview)
 
-## `antora-tools hello PERSON`
+## `antora-tools`
 
-Say hello
-
-```
-USAGE
-  $ antora-tools hello PERSON -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Who is saying hello
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
-```
-
-_See code: [dist/commands/hello/index.ts](https://github.com/tanapoln/antora-tools/blob/v0.0.0/dist/commands/hello/index.ts)_
-
-## `antora-tools hello world`
-
-Say hello world
+antora
 
 ```
 USAGE
-  $ antora-tools hello world
+  $ antora-tools
 
 DESCRIPTION
-  Say hello world
+  antora
 
 EXAMPLES
-  $ antora-tools hello world
-  hello world! (./src/commands/hello/world.ts)
+  antora example
 ```
 
-_See code: [dist/commands/hello/world.ts](https://github.com/tanapoln/antora-tools/blob/v0.0.0/dist/commands/hello/world.ts)_
+_See code: [dist/commands/index.ts](https://github.com/tanapoln/antora-tools/blob/v0.0.0/dist/commands/index.ts)_
 
 ## `antora-tools help [COMMANDS]`
 
@@ -347,4 +322,21 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v3.7.0/src/commands/plugins/update.ts)_
+
+## `antora-tools preview`
+
+Preview antora site
+
+```
+USAGE
+  $ antora-tools preview
+
+DESCRIPTION
+  Preview antora site
+
+EXAMPLES
+  $ antora-tools preview
+```
+
+_See code: [dist/commands/preview/index.ts](https://github.com/tanapoln/antora-tools/blob/v0.0.0/dist/commands/preview/index.ts)_
 <!-- commandsstop -->

@@ -1,6 +1,6 @@
 {
   "name": "antora-tools",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "description": "Antora cli tool to support development",
   "author": "Tanapol Nearunchorn",
   "bin": {
