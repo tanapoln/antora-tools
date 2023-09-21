@@ -8,6 +8,7 @@ import * as buildPlaybook from "@antora/playbook-builder";
 import * as userRequire from "@antora/user-require-helper";
 // @ts-ignore
 import * as generateSite from "@antora/site-generator";
+import * as lodash from "lodash";
 
 const playbookTemplate = {
   site: {
@@ -46,7 +47,7 @@ export default class Preview extends Command {
 
   async writeAntoraPlaybook(cwd: string, tmpdir: string): Promise<void> {
     playbookTemplate.content.sources[0].url = cwd;
-    playbookTemplate.content.sources[0].start_path = cwd + "/docs";
+    playbookTemplate.content.sources[0].start_path = "docs";
     playbookTemplate.output.dir = tmpdir + "/public";
 
     const yamlDoc = YAML.stringify(playbookTemplate);
@@ -61,7 +62,7 @@ export default class Preview extends Command {
 
     // const userRequireContext = { dot: tmpdir, paths: [tmpdir, cwd] };
     // let generatorPath: any, generator: any;
-    
+
     const playbook = buildPlaybook(
       `--playbook ${playbookFile}`,
       process.env,
@@ -92,8 +93,18 @@ export default class Preview extends Command {
     await this.writeAntoraPlaybook(cwd, tmpPath);
     await this.buildAntoraPlaybook(cwd, tmpPath);
 
+
+    const buildFn = lodash.debounce(async (evt, name) => {
+        this.log(`File ${name} is ${evt}`);
+        await this.buildAntoraPlaybook(cwd, tmpPath);
+    }, 500)
+
     fs.watch(".", { recursive: true }, (evt, name) => {
-      this.log(`File ${name} is ${evt}`);
+      if (name?.startsWith("tmp/")) {
+        return;
+      }
+      
+      buildFn(evt, name)
     });
 
     this.serveHttp(tmpPath, 8080);

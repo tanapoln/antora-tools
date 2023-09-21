@@ -1,3 +1,8 @@
 = Antora tools
 
 Welcome!
+
+Features
+
+* preview
+* build
