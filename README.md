@@ -18,7 +18,7 @@ $ npm install -g antora-tools
 $ antora-tools COMMAND
 running command...
 $ antora-tools (--version)
-antora-tools/0.0.0 darwin-arm64 node-v18.17.0
+antora-tools/0.1.1 darwin-arm64 node-v18.17.0
 $ antora-tools --help [COMMAND]
 USAGE
   $ antora-tools COMMAND
@@ -55,7 +55,7 @@ EXAMPLES
   antora example
 ```
 
-_See code: [dist/commands/index.ts](https://github.com/tanapoln/antora-tools/blob/v0.0.0/dist/commands/index.ts)_
+_See code: [dist/commands/index.ts](https://github.com/tanapoln/antora-tools/blob/v0.1.1/dist/commands/index.ts)_
 
 ## `antora-tools help [COMMANDS]`
 
@@ -338,5 +338,5 @@ EXAMPLES
   $ antora-tools preview
 ```
 
-_See code: [dist/commands/preview/index.ts](https://github.com/tanapoln/antora-tools/blob/v0.0.0/dist/commands/preview/index.ts)_
+_See code: [dist/commands/preview/index.ts](https://github.com/tanapoln/antora-tools/blob/v0.1.1/dist/commands/preview/index.ts)_
 <!-- commandsstop -->
